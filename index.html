@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>pruebas canvas</title>
+<style>
+	canvas {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		background: transparent;
+	}
+	#background {
+		z-index: -3;
+	}
+	#background2 {
+		z-index: -2;
+	}
+	#main {
+		z-index: -1;
+	}
+	#ship {
+		z-index: 0;
+	}
+	#debug {
+		position: absolute;
+		top: 0px;
+		left: 800px;
+		color: #00ff00;
+	}
+	.score {
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	color: #00FF00;
+	font-family: monospace;
+	cursor: default;
+	}
+	body {
+		background-color: #c0c0c0;
+	}
+</style>
+</head>
+<body onload="init()">
+	<!– The canvas for the panning background –>
+	<canvas id="background" width="800" height="500">
+		Your browser does not support canvas. Please try again with a different browser.
+	</canvas>
+	<canvas id="background2" width="800" height="500"></canvas>
+	<canvas id="main" width="800" height="500"></canvas>
+	<canvas id="ship" width="800" height="500"></canvas>
+	<script src="canvas_test.js"></script>
+	<div id="debug" class="debug"></div>
+	<div class="score">LIVES: <span id="lives"></span> SCORE: <span id="score"></span></div>
+	<!--
+	<div id="debugShip" class="debug">debugShip console</div>
+	-->
+</body>
+</html>
